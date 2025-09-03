@@ -1,0 +1,45 @@
+[INST] I need to translate the natural language problem into formal logic for Prover9.
+First, I will define the general rules with variables.
+Mapping predicates:
+"neglects health" -> neglects_health(x)
+"healthy" -> healthy(x)
+"suffers from diseases" -> suffers_diseases(x)
+"takes care of health" -> takes_care_of_health(x)
+
+General Premises (Axioms):
+1. neglects_health(x) -> suffers_diseases(x).
+2. takes_care_of_health(x) -> healthy(x).
+
+Now, I will formalize the specific facts about 'Mark'.
+Mapping specific facts:
+"Mark neglects his health" -> neglects_health(Mark)
+"Mark will not be healthy" -> -healthy(Mark)
+
+Specific Premise (for this problem):
+3. neglects_health(Mark) | -healthy(Mark).
+
+Goal:
+The goal is "healthy(Mark) | -suffers_diseases(Mark)".
+
+I will now format these premises and the goal for the Prover9 tool.
+Action:
+BEGIN_PROVER9_INPUT
+formulas(usable).
+    neglects_health(x) -> suffers_diseases(x).
+    takes_care_of_health(x) -> healthy(x).
+end_of_list.
+formulas(sos).
+    neglects_health(Mark) | -healthy(Mark).
+end_of_list.
+formulas(goals).
+    healthy(Mark) | -suffers_diseases(Mark).
+end_of_list.
+END_PROVER9_INPUT
+
+END_PROVER9_INPUT
+Observation: FAILED
+Thought: The prover result was FAILED.
+FINAL ANSWER: The final answer is that the goal "healthy(Mark) | -suffers_diseases(Mark)" cannot be proven or disproven using the given premises and axioms. [end of text]
+
+
+[/INST]

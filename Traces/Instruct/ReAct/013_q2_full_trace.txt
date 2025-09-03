@@ -1,0 +1,41 @@
+[INST] To translate this natural language problem into formal logic for Prover9, we will use variables for general rules and a constant 'Ava' for the specific individual.
+
+Mapping predicates:
+- "takes the elevator" -> takes_elevator(x)
+- "arrives quickly" -> arrives_quickly(x)
+- "climbs the stairs" -> climbs_stairs(x)
+- "experiences breathlessness" -> experiences_breathlessness(x)
+
+General Premises (Axioms):
+- takes_elevator(x) -> arrives_quickly(x).
+- climbs_stairs(x) -> experiences_breathlessness(x).
+
+Specific Premise (for Ava):
+- takes_elevator(Ava) | experiences_breathlessness(Ava).
+
+Goal:
+The goal is "arrives_quickly(Ava) | -climbs_stairs(Ava)".
+
+We will now format these premises and the goal for the Prover9 tool.
+
+Action:
+BEGIN_PROVER9_INPUT
+formulas(usable).
+    takes_elevator(x) -> arrives_quickly(x).
+    climbs_stairs(x) -> experiences_breathlessness(x).
+end_of_list.
+formulas(sos).
+    takes_elevator(Ava) | experiences_breathlessness(Ava).
+end_of_list.
+formulas(goals).
+    arrives_quickly(Ava) | -climbs_stairs(Ava).
+end_of_list.
+END_PROVER9_INPUT
+
+END_PROVER9_INPUT
+Observation: FAILED
+Thought: The prover result was FAILED.
+FINAL ANSWER: The final answer is that the goal cannot be proven or disproven with the given premises. [end of text]
+
+
+[/INST]

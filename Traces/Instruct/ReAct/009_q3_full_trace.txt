@@ -1,0 +1,48 @@
+[INST] I need to translate the natural language problem into formal logic for Prover9.
+First, I will define the general rules with variables.
+Mapping predicates:
+"turns off phone" -> turns_off_phone(x)
+"experience increased productivity" -> increases_productivity(x)
+"distractions" -> distractions(x)
+"has phone on" -> has_phone_on(x)
+"will not be distracted" -> will_not_be_distracted(x)
+
+General Premises (Axioms):
+1. turns_off_phone(x) -> increases_productivity(x).
+2. has_phone_on(x) -> distractions(x).
+3. will_not_be_distracted(x) -> has_phone_on(x).
+
+Now, I will formalize the specific facts about 'john'.
+Mapping specific facts:
+"John turns off his phone" -> turns_off_phone(john)
+"he will not be distracted" -> will_not_be_distracted(john)
+
+Specific Premise (for this problem):
+4. turns_off_phone(john) | will_not_be_distracted(john).
+
+Goal:
+The goal is "increases_productivity(john) | has_phone_on(john)".
+
+I will now format these premises and the goal for the Prover9 tool.
+Action:
+BEGIN_PROVER9_INPUT
+formulas(usable).
+    turns_off_phone(x) -> increases_productivity(x).
+    has_phone_on(x) -> distractions(x).
+    will_not_be_distracted(x) -> has_phone_on(x).
+end_of_list.
+formulas(sos).
+    turns_off_phone(john) | will_not_be_distracted(john).
+end_of_list.
+formulas(goals).
+    increases_productivity(john) | has_phone_on(john).
+end_of_list.
+END_PROVER9_INPUT
+
+END_PROVER9_INPUT
+Observation: PROVED
+Thought: The prover result was PROVED.
+FINAL ANSWER: The final answer is that "increases_productivity(john) | has_phone_on(john)". This means that either John experiences increased productivity or he has his phone on. [end of text]
+
+
+[/INST]

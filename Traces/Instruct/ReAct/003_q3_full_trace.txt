@@ -1,0 +1,48 @@
+[INST] I will translate the natural language problem into formal logic for Prover9.
+
+Mapping predicates:
+"engages in cardiovascular exercise" -> exercise(x)
+"improve overall well-being" -> well_being(x)
+"stays awake until late at night" -> stays_up_late(x)
+"feels tired" -> feels_tired(x)
+"feels healthier" -> feels_healthier(x)
+
+General Premises (Axioms):
+1. exercise(x) -> well_being(x).
+2. stays_up_late(x) -> feels_tired(x).
+
+Now, I will formalize the specific facts about 'Jack'.
+Mapping specific facts:
+"Jack engages in cardiovascular exercise" -> exercise(jack)
+"Jack stays up late" -> stays_up_late(jack)
+"Jack feels tired" -> feels_tired(jack)
+"Jack feels healthier" -> feels_healthier(jack)
+
+Specific Premise (for this problem):
+3. exercise(jack) | -feels_tired(jack).
+
+Goal:
+The goal is "well_being(jack) | -stays_up_late(jack)".
+
+I will now format these premises and the goal for the Prover9 tool.
+Action:
+BEGIN_PROVER9_INPUT
+formulas(usable).
+    exercise(x) -> well_being(x).
+    stays_up_late(x) -> feels_tired(x).
+end_of_list.
+formulas(sos).
+    exercise(jack) | -feels_tired(jack).
+end_of_list.
+formulas(goals).
+    well_being(jack) | -stays_up_late(jack).
+end_of_list.
+END_PROVER9_INPUT
+
+END_PROVER9_INPUT
+Observation: PROVED
+Thought: The prover result was PROVED.
+FINAL ANSWER: The final answer is that "well_being(jack) | -stays_up_late(jack)". This means that Jack's overall well-being is improved if he does not stay up late at night. [end of text]
+
+
+[/INST]

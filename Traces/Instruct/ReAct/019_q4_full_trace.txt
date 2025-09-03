@@ -1,0 +1,45 @@
+[INST] I will translate the natural language problem into formal logic for Prover9.
+
+Mapping predicates:
+"stores in the fridge" -> stores_in_fridge(x)
+"spoils quickly" -> spoils_quickly(x)
+"remains fresh for a longer time" -> remains_fresh(x)
+
+General Premises (Axioms):
+1. stores_in_fridge(x) -> remains_fresh(x).
+2. spoils_quickly(x) -> -remains_fresh(x).
+
+Now, I will formalize the specific facts about 'john'.
+Mapping specific facts:
+"john stores his food in the fridge" -> stores_in_fridge(john)
+"it won't spoil quickly" -> -spoils_quickly(john)
+
+Specific Premise (for this problem):
+3. stores_in_fridge(john) | -spoils_quickly(john).
+
+Goal:
+The goal is "remains_fresh(john) | -stores_in_fridge(john)".
+
+I will now format these premises and the goal for the Prover9 tool.
+
+Action:
+BEGIN_PROVER9_INPUT
+formulas(usable).
+    stores_in_fridge(x) -> remains_fresh(x).
+    spoils_quickly(x) -> -remains_fresh(x).
+end_of_list.
+formulas(sos).
+    stores_in_fridge(john) | -spoils_quickly(john).
+end_of_list.
+formulas(goals).
+    remains_fresh(john) | -stores_in_fridge(john).
+end_of_list.
+END_PROVER9_INPUT
+
+END_PROVER9_INPUT
+Observation: FAILED
+Thought: The prover result was FAILED.
+FINAL ANSWER: The final answer is that the goal "remains_fresh(john) | -stores_in_fridge(john)" cannot be proven or disproven using the given premises and axioms. [end of text]
+
+
+[/INST]

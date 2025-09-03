@@ -1,0 +1,45 @@
+[INST] I need to translate the natural language problem into formal logic for Prover9.
+First, I will define the general rules with variables.
+Mapping predicates:
+"diligent study" -> diligent_study(x)
+"good grades" -> good_grades(x)
+"excessive tv watching" -> excessive_tv_watching(x)
+"hinder academic performance" -> hinders_academic_performance(x)
+
+General Premises (Axioms):
+1. diligent_study(x) -> good_grades(x).
+2. excessive_tv_watching(x) -> hinders_academic_performance(x).
+
+Now, I will formalize the specific facts about 'Tom'.
+Mapping specific facts:
+"Tom is committed to studying diligently" -> diligent_study(tom)
+"he will excel academically" -> good_grades(tom)
+
+Specific Premise (for this problem):
+3. diligent_study(tom) | good_grades(tom).
+
+Goal:
+The goal is "excessive_tv_watching(tom) | hinders_academic_performance(tom)".
+
+I will now format these premises and the goal for the Prover9 tool.
+Action:
+BEGIN_PROVER9_INPUT
+formulas(usable).
+    diligent_study(x) -> good_grades(x).
+    excessive_tv_watching(x) -> hinders_academic_performance(x).
+end_of_list.
+formulas(sos).
+    diligent_study(tom) | good_grades(tom).
+end_of_list.
+formulas(goals).
+    excessive_tv_watching(tom) | hinders_academic_performance(tom).
+end_of_list.
+END_PROVER9_INPUT
+
+END_PROVER9_INPUT
+Observation: FAILED
+Thought: The prover result was FAILED.
+FINAL ANSWER: The final answer is that the goal "excessive_tv_watching(tom) | hinders_academic_performance(tom)" cannot be proven or disproven using the given premises and facts. [end of text]
+
+
+[/INST]

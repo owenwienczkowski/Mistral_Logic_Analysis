@@ -1,0 +1,38 @@
+[INST] I will use variables for general rules and a constant 'julie' for the specific entity.
+Mapping predicates:
+attends_gym -> gym_attendance(x)
+strengthens -> strength_increase(x)
+gains_weight -> weight_gain(x)
+eats_unhealthy -> unhealthy_food(x)
+General Premises (Axioms):
+gym_attendance(x) -> strength_increase(x).
+unhealthy_food(x) -> weight_gain(x).
+
+Specific Premise (for entity 'julie'):
+gym_attendance(julie) | -weight_gain(julie).
+
+Goal (for entity 'julie'):
+The goal is "strength_increase(julie) | -unhealthy_food(julie)".
+
+I will now format the input for the Prover9 tool.
+Action:
+BEGIN_PROVER9_INPUT
+formulas(usable).
+    gym_attendance(x) -> strength_increase(x).
+    unhealthy_food(x) -> weight_gain(x).
+end_of_list.
+formulas(sos).
+    gym_attendance(julie) | -weight_gain(julie).
+end_of_list.
+formulas(goals).
+    strength_increase(julie) | -unhealthy_food(julie).
+end_of_list.
+END_PROVER9_INPUT
+
+END_PROVER9_INPUT
+Observation: PROVED
+Thought: The prover result was PROVED.
+FINAL ANSWER: The final answer is that the goal of "strength_increase(julie) | -unhealthy_food(julie)" is provable. This means that Julie can achieve her goal of increasing her strength while avoiding unhealthy food. [end of text]
+
+
+[/INST]

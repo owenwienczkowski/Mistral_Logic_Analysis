@@ -1,0 +1,49 @@
+[INST] I will translate the natural language problem into formal logic for Prover9.
+
+First, I will define the general rules with variables.
+
+Mapping predicates:
+"spends a considerable amount of time outdoors" -> spends_outdoors(x)
+"acquires a tan" -> acquires_tan(x)
+"stays inside for long hours" -> stays_inside(x)
+
+General Premises (Axioms):
+1. spends_outdoors(x) -> acquires_tan(x).
+2. stays_inside(x) -> -acquires_tan(x).
+
+Now, I will formalize the specific facts about 'Rahul'.
+
+Mapping specific facts:
+"Rahul spends a considerable amount of time outdoors" -> spends_outdoors(rahul)
+"he will acquire a tan" -> acquires_tan(rahul)
+"he doesn't stay inside for long hours" -> stays_inside(rahul)
+
+Specific Premise (for this problem):
+3. spends_outdoors(rahul) | acquires_tan(rahul).
+
+Goal:
+The goal is "acquires_tan(rahul) | -stays_inside(rahul)".
+
+I will now format these premises and the goal for the Prover9 tool.
+
+Action:
+BEGIN_PROVER9_INPUT
+formulas(usable).
+    spends_outdoors(x) -> acquires_tan(x).
+    stays_inside(x) -> -acquires_tan(x).
+end_of_list.
+formulas(sos).
+    spends_outdoors(rahul) | acquires_tan(rahul).
+end_of_list.
+formulas(goals).
+    acquires_tan(rahul) | -stays_inside(rahul).
+end_of_list.
+END_PROVER9_INPUT
+
+END_PROVER9_INPUT
+Observation: PROVED
+Thought: The prover result was PROVED.
+FINAL ANSWER: The final answer is that "acquires_tan(rahul) | -stays_inside(rahul)". This means that Rahul will acquire a tan or he will not stay inside for long hours. [end of text]
+
+
+[/INST]

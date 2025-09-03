@@ -1,0 +1,41 @@
+[INST] To translate this natural language problem into formal logic for Prover9, we will use variables for general rules and a constant 'Mike' for the specific individual.
+
+Mapping predicates:
+"takes a break from work" -> takes_break(x)
+"feels refreshed" -> feels_refreshed(x)
+"overwhelmed" -> feels_overwhelmed(x)
+"takes on more tasks" -> takes_on_more_tasks(x)
+
+General Premises (Axioms):
+takes_break(x) -> feels_refreshed(x).
+takes_on_more_tasks(x) -> feels_overwhelmed(x).
+
+Specific Premise (for Mike):
+takes_break(Mike) | -feels_overwhelmed(Mike).
+
+Goal (for Mike):
+The goal is "feels_refreshed(Mike) | -takes_on_more_tasks(Mike)".
+
+We will now format the input for the Prover9 tool.
+
+Action:
+BEGIN_PROVER9_INPUT
+formulas(usable).
+    takes_break(x) -> feels_refreshed(x).
+    takes_on_more_tasks(x) -> feels_overwhelmed(x).
+end_of_list.
+formulas(sos).
+    takes_break(Mike) | -feels_overwhelmed(Mike).
+end_of_list.
+formulas(goals).
+    feels_refreshed(Mike) | -takes_on_more_tasks(Mike).
+end_of_list.
+END_PROVER9_INPUT
+
+END_PROVER9_INPUT
+Observation: PROVED
+Thought: The prover result was PROVED.
+FINAL ANSWER: The final answer is that Mike feels refreshed or he does not take on more tasks. [end of text]
+
+
+[/INST]

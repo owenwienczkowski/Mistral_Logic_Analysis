@@ -1,0 +1,45 @@
+[INST] I need to translate the natural language problem into formal logic for Prover9.
+First, I will define the general rules with variables.
+Mapping predicates:
+"participates in sports" -> plays_sports(x)
+"stay fit" -> stays_fit(x)
+"eats unhealthy food" -> eats_unhealthy_food(x)
+"experience negative health consequences" -> experiences_negative_health_consequences(x)
+
+General Premises (Axioms):
+1. plays_sports(x) -> stays_fit(x).
+2. eats_unhealthy_food(x) -> experiences_negative_health_consequences(x).
+
+Now, I will formalize the specific facts about 'Dev'.
+Mapping specific facts:
+"Dev participates in sports" -> plays_sports(Dev)
+"he won't experience negative health consequences" -> -experiences_negative_health_consequences(Dev)
+
+Specific Premise (for this problem):
+3. plays_sports(Dev) | -experiences_negative_health_consequences(Dev).
+
+Goal:
+The goal is "stays_fit(Dev) | -eats_unhealthy_food(Dev)".
+
+I will now format these premises and the goal for the Prover9 tool.
+Action:
+BEGIN_PROVER9_INPUT
+formulas(usable).
+    plays_sports(x) -> stays_fit(x).
+    eats_unhealthy_food(x) -> experiences_negative_health_consequences(x).
+end_of_list.
+formulas(sos).
+    plays_sports(Dev) | -experiences_negative_health_consequences(Dev).
+end_of_list.
+formulas(goals).
+    stays_fit(Dev) | -eats_unhealthy_food(Dev).
+end_of_list.
+END_PROVER9_INPUT
+
+END_PROVER9_INPUT
+Observation: PROVED
+Thought: The prover result was PROVED.
+FINAL ANSWER: The final answer is that "Dev stays fit" or "Dev does not eat unhealthy food". [end of text]
+
+
+[/INST]

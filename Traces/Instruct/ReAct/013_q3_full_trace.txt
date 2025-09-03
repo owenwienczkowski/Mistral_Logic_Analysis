@@ -1,0 +1,41 @@
+[INST] To translate this natural language problem into formal logic for Prover9, we will use variables for general rules and a constant 'Ava' for the individual in question.
+
+Mapping predicates:
+- "takes the elevator" -> elevator(Ava)
+- "arrives quickly" -> arrives_quickly(Ava)
+- "climbs the stairs" -> climbs_stairs(Ava)
+- "experiences breathlessness" -> experiences_breathlessness(Ava)
+
+General Premises (Axioms):
+- elevator(Ava) -> arrives_quickly(Ava).
+- climbs_stairs(Ava) -> experiences_breathlessness(Ava).
+
+Specific Premise (for Ava):
+- elevator(Ava) | -experiences_breathlessness(Ava).
+
+Goal:
+The goal is "arrives_quickly(Ava) | -climbs_stairs(Ava)".
+
+We will now format these premises and the goal for the Prover9 tool.
+
+Action:
+BEGIN_PROVER9_INPUT
+formulas(usable).
+    elevator(x) -> arrives_quickly(x).
+    climbs_stairs(x) -> experiences_breathlessness(x).
+end_of_list.
+formulas(sos).
+    elevator(Ava) | -experiences_breathlessness(Ava).
+end_of_list.
+formulas(goals).
+    arrives_quickly(Ava) | -climbs_stairs(Ava).
+end_of_list.
+END_PROVER9_INPUT
+
+END_PROVER9_INPUT
+Observation: PROVED
+Thought: The prover result was PROVED.
+FINAL ANSWER: The final answer is that Ava arrives quickly or does not climb the stairs. [end of text]
+
+
+[/INST]

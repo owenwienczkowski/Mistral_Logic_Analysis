@@ -1,0 +1,41 @@
+[INST] To translate this problem into a first-order logic format for Prover9, we will use variables for general rules and a constant 'Ava' for the specific individual.
+
+Mapping predicates:
+- "takes the elevator" -> elevator(x)
+- "arrives quickly" -> arrives_quickly(x)
+- "experiences breathlessness" -> breathless(x)
+- "climbs the stairs" -> climbs_stairs(x)
+
+General Premises (Axioms):
+- elevator(x) -> arrives_quickly(x).
+- climbs_stairs(x) -> breathless(x).
+
+Specific Premise (for Ava):
+- elevator(Ava) | breathless(Ava).
+
+Goal (for Ava):
+The goal is "arrives_quickly(Ava) | breathless(Ava)".
+
+We will now format the input for the Prover9 tool.
+
+Action:
+BEGIN_PROVER9_INPUT
+formulas(usable).
+    elevator(x) -> arrives_quickly(x).
+    climbs_stairs(x) -> breathless(x).
+end_of_list.
+formulas(sos).
+    elevator(Ava) | breathless(Ava).
+end_of_list.
+formulas(goals).
+    arrives_quickly(Ava) | breathless(Ava).
+end_of_list.
+END_PROVER9_INPUT
+
+END_PROVER9_INPUT
+Observation: PROVED
+Thought: The prover result was PROVED.
+FINAL ANSWER: The final answer is that Ava arrives quickly or experiences breathlessness. [end of text]
+
+
+[/INST]

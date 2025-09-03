@@ -1,0 +1,47 @@
+[INST] I will translate the natural language problem into formal logic for Prover9.
+
+Mapping predicates:
+"engages in cardiovascular exercise" -> exercise(x)
+"improve overall well-being" -> well_being(x)
+"stays awake until late at night" -> stays_up_late(x)
+"feels tired" -> feels_tired(x)
+"feels healthier" -> feels_healthier(x)
+
+General Premises (Axioms):
+1. exercise(x) -> well_being(x).
+2. stays_up_late(x) -> feels_tired(x).
+
+Now, I will formalize the specific facts about 'Jack'.
+Mapping specific facts:
+"Jack engages in cardiovascular exercise" -> exercise(jack)
+"he will feel healthier" -> feels_healthier(jack)
+"he doesn't stay up late" -> -stays_up_late(jack)
+
+Specific Premise (for this problem):
+3. exercise(jack) | -stays_up_late(jack).
+
+Goal:
+The goal is "feels_healthier(jack) | -feels_tired(jack)".
+
+I will now format these premises and the goal for the Prover9 tool.
+Action:
+BEGIN_PROVER9_INPUT
+formulas(usable).
+    exercise(x) -> well_being(x).
+    stays_up_late(x) -> feels_tired(x).
+end_of_list.
+formulas(sos).
+    exercise(jack) | -stays_up_late(jack).
+end_of_list.
+formulas(goals).
+    feels_healthier(jack) | -feels_tired(jack).
+end_of_list.
+END_PROVER9_INPUT
+
+END_PROVER9_INPUT
+Observation: FAILED
+Thought: The prover result was FAILED.
+FINAL ANSWER: The final answer is that the goal "feels_healthier(jack) | -feels_tired(jack)" cannot be proven or disproven using the given premises and axioms. [end of text]
+
+
+[/INST]

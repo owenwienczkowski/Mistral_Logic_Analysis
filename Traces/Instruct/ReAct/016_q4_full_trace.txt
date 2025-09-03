@@ -1,0 +1,45 @@
+[INST] I need to translate the natural language problem into formal logic for Prover9.
+First, I will define the general rules with variables.
+Mapping predicates:
+"consumes processed food" -> consumes_processed_food(x)
+"feels sluggish" -> feels_sluggish(x)
+"consumes organic food" -> consumes_organic_food(x)
+"has an increase in energy" -> has_increase_in_energy(x)
+
+General Premises (Axioms):
+1. consumes_processed_food(x) -> feels_sluggish(x).
+2. consumes_organic_food(x) -> has_increase_in_energy(x).
+
+Now, I will formalize the specific facts about 'john'.
+Mapping specific facts:
+"John consumes processed food" -> consumes_processed_food(john)
+"he will not have an increase in energy" -> -has_increase_in_energy(john)
+
+Specific Premise (for this problem):
+3. consumes_processed_food(john) | -has_increase_in_energy(john).
+
+Goal:
+The goal is "feels_sluggish(john) | -consumes_organic_food(john)".
+
+I will now format these premises and the goal for the Prover9 tool.
+Action:
+BEGIN_PROVER9_INPUT
+formulas(usable).
+    consumes_processed_food(x) -> feels_sluggish(x).
+    consumes_organic_food(x) -> has_increase_in_energy(x).
+end_of_list.
+formulas(sos).
+    consumes_processed_food(john) | -has_increase_in_energy(john).
+end_of_list.
+formulas(goals).
+    feels_sluggish(john) | -consumes_organic_food(john).
+end_of_list.
+END_PROVER9_INPUT
+
+END_PROVER9_INPUT
+Observation: PROVED
+Thought: The prover result was PROVED.
+FINAL ANSWER: The final answer is that "feels_sluggish(john) | -consumes_organic_food(john)". [end of text]
+
+
+[/INST]

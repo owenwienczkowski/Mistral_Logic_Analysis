@@ -1,0 +1,45 @@
+[INST] I need to translate the natural language problem into formal logic for Prover9.
+First, I will define the general rules with variables.
+Mapping predicates:
+"plants trees" -> plants_trees(x)
+"help the environment" -> helps_environment(x)
+"pollutes the air" -> pollutes_air(x)
+"contributes to global warming" -> contributes_to_global_warming(x)
+
+General Premises (Axioms):
+1. plants_trees(x) -> helps_environment(x).
+2. pollutes_air(x) -> contributes_to_global_warming(x).
+
+Now, I will formalize the specific facts about 'Aadi'.
+Mapping specific facts:
+"Aadi plants trees" -> plants_trees(Aadi)
+"Aadi doesn't pollute the air" -> -pollutes_air(Aadi)
+
+Specific Premise (for this problem):
+3. plants_trees(Aadi) | -pollutes_air(Aadi).
+
+Goal:
+The goal is "helps_environment(Aadi) | -contributes_to_global_warming(Aadi)".
+
+I will now format these premises and the goal for the Prover9 tool.
+Action:
+BEGIN_PROVER9_INPUT
+formulas(usable).
+    plants_trees(x) -> helps_environment(x).
+    pollutes_air(x) -> contributes_to_global_warming(x).
+end_of_list.
+formulas(sos).
+    plants_trees(Aadi) | -pollutes_air(Aadi).
+end_of_list.
+formulas(goals).
+    helps_environment(Aadi) | -contributes_to_global_warming(Aadi).
+end_of_list.
+END_PROVER9_INPUT
+
+END_PROVER9_INPUT
+Observation: FAILED
+Thought: The prover result was FAILED.
+FINAL ANSWER: The final answer is that the goal cannot be proven or disproven with the given premises and facts. [end of text]
+
+
+[/INST]

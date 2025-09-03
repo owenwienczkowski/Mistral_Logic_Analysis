@@ -1,0 +1,45 @@
+[INST] I need to translate the natural language problem into formal logic for Prover9.
+First, I will define the general rules with variables.
+Mapping predicates:
+"drives recklessly" -> drives_recklessly(x)
+"receives a ticket" -> receives_ticket(x)
+"drives safely" -> drives_safely(x)
+"arrives safely" -> arrives_safely(x)
+
+General Premises (Axioms):
+1. drives_recklessly(x) -> receives_ticket(x).
+2. drives_safely(x) -> arrives_safely(x).
+
+Now, I will formalize the specific facts about 'Dave'.
+Mapping specific facts:
+"Dave drives recklessly" -> drives_recklessly(Dave)
+"Dave arrives safely" -> arrives_safely(Dave)
+
+Specific Premise (for this problem):
+3. drives_recklessly(Dave) | arrives_safely(Dave).
+
+Goal:
+The goal is "receives_ticket(Dave) | -drives_safely(Dave)".
+
+I will now format these premises and the goal for the Prover9 tool.
+Action:
+BEGIN_PROVER9_INPUT
+formulas(usable).
+    drives_recklessly(x) -> receives_ticket(x).
+    drives_safely(x) -> arrives_safely(x).
+end_of_list.
+formulas(sos).
+    drives_recklessly(Dave) | arrives_safely(Dave).
+end_of_list.
+formulas(goals).
+    receives_ticket(Dave) | -drives_safely(Dave).
+end_of_list.
+END_PROVER9_INPUT
+
+END_PROVER9_INPUT
+Observation: FAILED
+Thought: The prover result was FAILED.
+FINAL ANSWER: The final answer is that the goal "receives_ticket(Dave) | -drives_safely(Dave)" cannot be proven or disproven using the given premises and axioms. [end of text]
+
+
+[/INST]

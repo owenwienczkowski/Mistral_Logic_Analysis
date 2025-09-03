@@ -1,0 +1,45 @@
+[INST] I need to translate the natural language problem into formal logic for Prover9.
+First, I will define the general rules with variables.
+Mapping predicates:
+"studies regularly" -> studies_regularly(x)
+"learn new skills" -> learns_new_skills(x)
+"stays up late" -> stays_up_late(x)
+"tired" -> is_tired(x)
+
+General Premises (Axioms):
+1. studies_regularly(x) -> learns_new_skills(x).
+2. stays_up_late(x) -> is_tired(x).
+
+Now, I will formalize the specific facts about 'Amber'.
+Mapping specific facts:
+"Amber studies regularly" -> studies_regularly(amber)
+"she won't be tired" -> -is_tired(amber)
+
+Specific Premise (for this problem):
+3. studies_regularly(amber) | -is_tired(amber).
+
+Goal:
+The goal is "learns_new_skills(amber) | stays_up_late(amber)".
+
+I will now format these premises and the goal for the Prover9 tool.
+Action:
+BEGIN_PROVER9_INPUT
+formulas(usable).
+    studies_regularly(x) -> learns_new_skills(x).
+    stays_up_late(x) -> is_tired(x).
+end_of_list.
+formulas(sos).
+    studies_regularly(amber) | -is_tired(amber).
+end_of_list.
+formulas(goals).
+    learns_new_skills(amber) | stays_up_late(amber).
+end_of_list.
+END_PROVER9_INPUT
+
+END_PROVER9_INPUT
+Observation: FAILED
+Thought: The prover result was FAILED.
+FINAL ANSWER: The final answer is that the goal "learns_new_skills(amber) | stays_up_late(amber)" cannot be proven or disproven with the given premises and facts. [end of text]
+
+
+[/INST]

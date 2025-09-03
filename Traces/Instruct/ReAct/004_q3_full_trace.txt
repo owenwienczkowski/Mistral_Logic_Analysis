@@ -1,0 +1,45 @@
+[INST] I need to translate the natural language problem into formal logic for Prover9.
+First, I will define the general rules with variables.
+Mapping predicates:
+"takes a break from work" -> takes_break(x)
+"feels overwhelmed" -> feels_overwhelmed(x)
+"experiences refreshed" -> experiences_refreshed(x)
+"takes on more tasks" -> takes_on_more_tasks(x)
+
+General Premises (Axioms):
+1. takes_break(x) -> experiences_refreshed(x).
+2. feels_overwhelmed(x) -> takes_on_more_tasks(x).
+
+Now, I will formalize the specific facts about 'Mike'.
+Mapping specific facts:
+"Mike takes a break from work" -> takes_break(mike)
+"he does not experience overwhelming feelings" -> -feels_overwhelmed(mike)
+
+Specific Premise (for this problem):
+3. takes_break(mike) | -feels_overwhelmed(mike).
+
+Goal:
+The goal is "experiences_refreshed(mike) | takes_on_more_tasks(mike)".
+
+I will now format these premises and the goal for the Prover9 tool.
+Action:
+BEGIN_PROVER9_INPUT
+formulas(usable).
+    takes_break(x) -> experiences_refreshed(x).
+    feels_overwhelmed(x) -> takes_on_more_tasks(x).
+end_of_list.
+formulas(sos).
+    takes_break(mike) | -feels_overwhelmed(mike).
+end_of_list.
+formulas(goals).
+    experiences_refreshed(mike) | takes_on_more_tasks(mike).
+end_of_list.
+END_PROVER9_INPUT
+
+END_PROVER9_INPUT
+Observation: FAILED
+Thought: The prover result was FAILED.
+FINAL ANSWER: The final answer is that the goal cannot be proven or disproven with the given premises and axioms. [end of text]
+
+
+[/INST]
