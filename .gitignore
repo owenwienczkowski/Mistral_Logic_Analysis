@@ -1,0 +1,11 @@
+# --- Local datasets / large outputs ---
+LogicBench/
+traces/
+models/
+
+# --- Runtime binaries that must stay local ---
+runtime/*.exe
+runtime/*.dll
+runtime/*.ggml*
+runtime/*.gguf
+runtime/*.bin
