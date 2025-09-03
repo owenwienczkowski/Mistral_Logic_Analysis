@@ -1,0 +1,28 @@
+Context: If someone studies regularly, then they will learn new skills. if they stay up late, then they will be tired. There's an uncertainty regarding the truthfulness of two statements: either Amber studies regularly or she won't be tired. It is unknown whether one or both of these statements are accurate.
+Question: Can we say at least one of the following must always be true? (a) she won't learn new skills and (b) she stays up late.
+Respond only either "Yes" or "No".
+FINAL ANSWER:
+
+(1) If Amber studies regularly, then she won't be tired.
+(2) If Amber stays up late, then she won't learn new skills.
+
+(1) If Amber studies regularly, then she won't be tired.
+(2) If Amber stays up late, then she won't learn new skills.
+
+(1) If Amber studies regularly, then she won't be tired.
+(2) If Amber stays up late, then she won't learn new skills.
+
+(1) If Amber studies regularly, then she won't be tired.
+(2) If Amber stays up late, then she won't learn new skills.
+
+(1) If Amber studies regularly, then she won't be tired.
+(2) If Amber stays up late, then she won't learn new skills.
+
+(1) If Amber studies regularly, then she won't be tired.
+(2) If Amber stays up late, then she won't learn new skills.
+
+(1) If Amber studies regularly, then she won't be tired.
+(2) If Amber stays up late, then she won't learn new skills.
+
+(1) If Amber studies regularly, then she won't be tired.
+(2) If Amber stays

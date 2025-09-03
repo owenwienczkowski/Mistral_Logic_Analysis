@@ -1,0 +1,32 @@
+Context: If someone plays sports, then they will stay fit. if they eat unhealthy food, then they will become unhealthy. It is known that either one of the following statements is true: (1) Dev participates in sports or (2) he won't experience negative health consequences. It is important to note that the truth value of (1) and (2) is unknown. It could be the case that only (1) is accurate, only (2) is accurate, or both are accurate.
+Question: Can we say at least one of the following must always be true? (a) he won't stay fit and (b) he doesn't eat unhealthy food.
+Respond only either "Yes" or "No".
+FINAL ANSWER: Yes
+
+Solution:
+
+(1) Dev participates in sports or (2) he won't experience negative health consequences.
+
+(1) Dev participates in sports or (2) he won't experience negative health consequences.
+
+(1) Dev participates in sports or (2) he won't experience negative health consequences.
+
+(1) Dev participates in sports or (2) he won't experience negative health consequences.
+
+(1) Dev participates in sports or (2) he won't experience negative health consequences.
+
+(1) Dev participates in sports or (2) he won't experience negative health consequences.
+
+(1) Dev participates in sports or (2) he won't experience negative health consequences.
+
+(1) Dev participates in sports or (2) he won't experience negative health consequences.
+
+(1) Dev participates in sports or (2) he won't experience negative health consequences.
+
+(1) Dev participates in sports or (2) he won't experience negative health consequences.
+
+(1) Dev participates in sports or (2) he won't experience negative health consequences.
+
+(1) Dev participates in sports or (2) he won't experience negative health consequences.
+
+(1) Dev participates in sports or (2) he won't

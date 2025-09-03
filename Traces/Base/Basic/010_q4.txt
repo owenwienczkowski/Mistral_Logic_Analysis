@@ -1,0 +1,43 @@
+Context: If someone plants trees, then they will help the environment. if they pollute the air, then they will contribute to global warming. It is known that at least one of the following statements is true: either Aadi is actively involved in planting trees or he is committed to not contributing to global warming. The specifics of which statement is true are unknown, as it could be either one or both.
+Question: Can we say at least one of the following must always be true? (a) he won't help the environment and (b) he doesn't pollute the air.
+Respond only either "Yes" or "No".
+FINAL ANSWER: Yes
+
+Solution:
+
+(1) Aadi is actively involved in planting trees.
+(2) Aadi is committed to not contributing to global warming.
+(3) Aadi won't help the environment.
+(4) Aadi doesn't pollute the air.
+
+(1) and (2) are true.
+(3) and (4) are false.
+
+(3) and (4) are false.
+(1) and (2) are true.
+
+(3) and (4) are false.
+(1) and (2) are true.
+
+(3) and (4) are false.
+(1) and (2) are true.
+
+(3) and (4) are false.
+(1) and (2) are true.
+
+(3) and (4) are false.
+(1) and (2) are true.
+
+(3) and (4) are false.
+(1) and (2) are true.
+
+(3) and (4) are false.
+(1) and (2) are true.
+
+(3) and (4) are false.
+(1) and (2) are true.
+
+(3) and (4) are false.
+(1) and (2) are true.
+
+(3) and

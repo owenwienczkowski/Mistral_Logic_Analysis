@@ -1,0 +1,40 @@
+Context: If someone puts in a significant amount of time and effort at work, they will inevitably become tired and worn out. However, by taking regular breaks, they can regain their energy and feel revitalized. We are aware that at least one of the following statements holds true: either the individual, let's call him John, works long hours or he does not experience a sense of refreshment. It is uncertain which of these statements is accurate, as it could be the case that only the first statement is true, or only the second statement, or both of them simultaneously.
+Question: Can we say at least one of the following must always be true? (a) he will become exhausted and (b) he takes breaks.
+Respond only either "Yes" or "No".
+FINAL ANSWER:
+
+(1) John works long hours.
+(2) John does not experience a sense of refreshment.
+
+(3) John works long hours.
+(4) John does not experience a sense of refreshment.
+
+(5) John works long hours.
+(6) John does not experience a sense of refreshment.
+
+(7) John works long hours.
+(8) John does not experience a sense of refreshment.
+
+(9) John works long hours.
+(10) John does not experience a sense of refreshment.
+
+(11) John works long hours.
+(12) John does not experience a sense of refreshment.
+
+(13) John works long hours.
+(14) John does not experience a sense of refreshment.
+
+(15) John works long hours.
+(16) John does not experience a sense of refreshment.
+
+(17) John works long hours.
+(18) John does not experience a sense of refreshment.
+
+(19) John works long hours.
+(20) John does not experience a sense of refreshment.
+
+(21) John works long hours.
+(22) John does not experience a sense of refreshment.
+
+(23) John works long hours.
+(24) John does not experience a sense of

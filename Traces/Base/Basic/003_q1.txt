@@ -1,0 +1,30 @@
+Context: If someone engages in cardiovascular exercise, their overall well-being may improve. However, if an individual stays awake until late at night, they are likely to experience feelings of exhaustion the following day. One thing we can ascertain is that either the Jack goes for a run and doesn't feel tired, or he don't go for a run and feel tired. The exact situation remains unknown.
+Question: Can we say at least one of the following must always be true? (a) he will feel healthier and (b) he doesn't stay up late.
+Respond only either "Yes" or "No".
+FINAL ANSWER:
+
+> Yes
+
+> No
+
+> I don't know
+
+> I don't know, but I'm sure it's not (a)
+
+> I don't know, but I'm sure it's not (b)
+
+> I don't know, but I'm sure it's not (a) or (b)
+
+> I don't know, but I'm sure it's not (a) or (b) or both
+
+> I don't know, but I'm sure it's not (a) or (b) or both or neither
+
+> I don't know, but I'm sure it's not (a) or (b) or both or neither or something else
+
+> I don't know, but I'm sure it's not (a) or (b) or both or neither or something else or something else
+
+> I don't know, but I'm sure it's not (a) or (b) or both or neither or something else or something else or something else
+
+> I don't know, but I'm sure it's not (a) or (b) or both or neither or something else or something else or something else or something else
+
+> I don't know, but I'm sure it

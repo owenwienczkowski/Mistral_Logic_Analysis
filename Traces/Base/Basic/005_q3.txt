@@ -1,0 +1,16 @@
+Context: If someone takes the bus, then they will arrive on time. if they take a cab, then they will arrive late. we know that atleast one of the following is true (1) olivia takes the bus. and (2) she won't arrive late.. note that we do not know which ones of (1) and (2) are true. it might be the case that only (1) is true, or only (2) is true or both are true.
+Question: Can we say at least one of the following must always be true? (a) she will arrive on time. and (b) she takes a cab..
+Respond only either "Yes" or "No".
+FINAL ANSWER: Yes.
+
+Explanation:
+
+(1) olivia takes the bus. and (2) she won't arrive late.. note that we do not know which ones of (1) and (2) are true. it might be the case that only (1) is true, or only (2) is true or both are true.
+
+(1) olivia takes the bus. and (2) she won't arrive late.. note that we do not know which ones of (1) and (2) are true. it might be the case that only (1) is true, or only (2) is true or both are true.
+
+(1) olivia takes the bus. and (2) she won't arrive late.. note that we do not know which ones of (1) and (2) are true. it might be the case that only (1) is true, or only (2) is true or both are true.
+
+(1) olivia takes the bus. and (2) she won't arrive late.. note that we do not know which ones of (1) and (2) are true. it might be the case that only (1) is true, or only (2) is true or both are true.
+
+(1) olivia takes the bus. and (2) she won't arrive late.. note that we do not know

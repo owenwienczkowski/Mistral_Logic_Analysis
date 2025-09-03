@@ -1,0 +1,47 @@
+Context: If someone plays video games, then they have increased stress. if they meditate regularly, then they will feel relaxed. It is known that at least one of the following is true: either Vicky plays video games or he do not feel relaxed. The exact combination of these possibilities is unknown.
+Question: Can we say at least one of the following must always be true? (a) he has increased stress and (b) he doesn't meditate regularly.
+Respond only either "Yes" or "No".
+FINAL ANSWER: Yes
+
+Solution:
+
+(1) If Vicky plays video games, then he has increased stress.
+(2) If Vicky doesn't meditate regularly, then he will feel relaxed.
+
+(1) and (2) are contradictory.
+
+(1) and (2) are contradictory.
+
+(1) and (2) are contradictory.
+
+(1) and (2) are contradictory.
+
+(1) and (2) are contradictory.
+
+(1) and (2) are contradictory.
+
+(1) and (2) are contradictory.
+
+(1) and (2) are contradictory.
+
+(1) and (2) are contradictory.
+
+(1) and (2) are contradictory.
+
+(1) and (2) are contradictory.
+
+(1) and (2) are contradictory.
+
+(1) and (2) are contradictory.
+
+(1) and (2) are contradictory.
+
+(1) and (2) are contradictory.
+
+(1) and (2) are contradictory.
+
+(1) and (2) are contradictory.
+
+(1) and (2) are contradictory.
+
+(1

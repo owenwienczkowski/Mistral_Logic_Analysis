@@ -1,0 +1,45 @@
+Context: If someone plays video games, then they have increased stress. if they meditate regularly, then they will feel relaxed. It is known that at least one of the following is true: either Vicky plays video games or he do not feel relaxed. The exact combination of these possibilities is unknown.
+Question: Can we say at least one of the following must always be true? (a) he doesn't have increased stress and (b) he meditates regularly.
+Respond only either "Yes" or "No".
+FINAL ANSWER: Yes
+
+Solution:
+
+(1) If Vicky plays video games, then he has increased stress.
+(2) If Vicky meditates regularly, then he feels relaxed.
+(3) If Vicky does not feel relaxed, then he does not meditate regularly.
+(4) If Vicky does not have increased stress, then he does not play video games.
+
+(1) and (2) are given.
+(3) is given.
+(4) is given.
+
+(1) and (2) are given.
+(3) is given.
+(4) is given.
+
+(1) and (2) are given.
+(3) is given.
+(4) is given.
+
+(1) and (2) are given.
+(3) is given.
+(4) is given.
+
+(1) and (2) are given.
+(3) is given.
+(4) is given.
+
+(1) and (2) are given.
+(3) is given.
+(4) is given.
+
+(1) and (2) are given.
+(3) is given.
+(4) is given.
+
+(1) and (2) are given.
+(3) is given.
+(4) is given.
+
+(1) and (2) are

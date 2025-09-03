@@ -1,0 +1,29 @@
+Context: If an individual frequently uses the internet, they may develop a dependency on it. On the contrary, if they spend more time outdoors, they tend to engage in physical activities. It is established that at least one of the following statements is true: either Aryan spends a significant amount of time on the internet or he will not become more active. It is possible that solely (1) is true, or solely (2) is true, or even both are true simultaneously.
+Question: Can we say at least one of the following must always be true? (a) he becomes addicted to it and (b) he doesn't go outdoors more often.
+Respond only either "Yes" or "No".
+FINAL ANSWER:
+
+(1) Yes
+(2) No
+
+Solution:
+
+(1) Yes
+(2) No
+
+Explanation:
+
+(1) Yes
+(2) No
+
+The question is asking whether it is possible for Aryan to be both addicted to the internet and not go outdoors more often. The answer is no, because if Aryan is addicted to the internet, he will spend more time on it and less time outdoors. Therefore, the statement "he becomes addicted to it and he doesn't go outdoors more often" cannot be true at the same time.
+
+(1) Yes
+(2) No
+
+The question is asking whether it is possible for Aryan to be both addicted to the internet and not go outdoors more often. The answer is no, because if Aryan is addicted to the internet, he will spend more time on it and less time outdoors. Therefore, the statement "he becomes addicted to it and he doesn't go outdoors more often" cannot be true at the same time.
+
+(1) Yes
+(2) No
+
+The question is asking whether it is possible for Aryan to be both addicted to the internet and not go outdoors more often. The answer is no, because if Aryan is addicted to the internet, he will spend more time on it
