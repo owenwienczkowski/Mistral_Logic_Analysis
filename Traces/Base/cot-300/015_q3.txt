@@ -1,0 +1,21 @@
+Example//
+Context: If an individual wakes up early, they will avoid traffic. Conversely, if they get a flat tire, they will miss work. It is known that at least one of the following statements is true: either John wakes up early or he will work. However, the actual veracity of either statement remains ambiguous, as it could be the case that only the first statement is true, only the second statement is true, or both statements are true.
+Question: Can we say at least one of the following must always be true? (a) He avoids traffic and (b) He does not get a flat tire"
+Let's think step by step.
+Thought: The premises are (wakes up early -> avoid traffic), (flat tire -> -work), and (wakes up early | work). The goal is to prove (avoid traffic | -flat tire). I can use the premise (wakes up early | work) to check both possible cases. In the first case, if 'wakes up early' is true, then 'avoid traffic' must also be true, which makes the conclusion (avoid traffic | -flat tire) true. In the second case, if 'work' is true, I must use the contrapositive of the second premise, which is (work -> -flat tire). From this, 'work' being true means '-flat tire' is true, which also makes the conclusion (avoid traffic | -flat tire) true. Since the conclusion holds in both possible scenarios, it is logically guaranteed.
+FINAL ANSWER: YES
+//end of example
+
+Example//
+Context: If P, Q. Conversely, if R, -S. It is known that at least one of the following statements is true: either P or S. However, the actual veracity of either statement remains ambiguous, as it could be the case that only the first statement is true, only the second statement is true, or both statements are true.
+Question: Can we say at least one of the following must always be true? (a) -Q and (b) -S"
+Let's think step by step.
+Thought: The premises are (P -> Q), (R -> -S), and (P | S). The goal is to determine if (-Q | -S) must be true. I will try to find a counterexample where the premises are true but the conclusion is false. For the conclusion (-Q | -S) to be false, both Q and S must be true. Assuming this, we can check the premises: if S is true, then R must be false for the second premise (R -> -S) to hold. If Q is true, we can assume P is true to satisfy the first premise (P -> Q). This assignment also satisfies the third premise, (P | S), since both P and S are true. So, a counterexample exists where P is true, Q is true, S is true, and R is false. Since all premises can be true while the conclusion is false, the conclusion is not guaranteed.
+FINAL ANSWER: NO
+//end of example
+
+Context: If someone plays sports, then they will stay fit. if they eat unhealthy food, then they will become unhealthy. It is known that either one of the following statements is true: (1) Dev participates in sports or (2) he won't experience negative health consequences. It is important to note that the truth value of (1) and (2) is unknown. It could be the case that only (1) is accurate, only (2) is accurate, or both are accurate.
+Question: Can we say at least one of the following must always be true? (a) he will stay fit and (b) he eats unhealthy food.
+Let's think step by step.
+Thought: 1. The premises are (sports -> fit), (unhealthy food -> unhealthy), and (sports | -unhealthy). The goal is to prove (stay fit | eat unhealthy). I can use the premise (sports | -unhealthy) to check both possible cases. In the first case, if 'sports' is true, then 'stay fit' must also be true, which makes the conclusion (stay fit | eat unhealthy) true. In the second case, if 'unhealthy' is true, I must use the contrapositive of the second premise, which is (unhealthy -> -unhealthy). From this, 'unhealthy' being true means '-unhealthy' is true, which also makes the conclusion (stay fit | eat unhealthy) true. Since the conclusion holds in both possible scenarios, it is logically guaranteed.
+2. The premises are (sports -> fit), (unhealthy food -> unhealthy), and (sports | -unhealthy). The goal is to prove (stay fit | eat unhealthy). I can use the premise (sports | -unhealthy) to check both possible cases. In the first case, if 'sports' is true, then 'stay fit' must also be true, which makes the conclusion (stay fit |

@@ -1,0 +1,22 @@
+Example//
+Context: If an individual wakes up early, they will avoid traffic. Conversely, if they get a flat tire, they will miss work. It is known that at least one of the following statements is true: either John wakes up early or he will work. However, the actual veracity of either statement remains ambiguous, as it could be the case that only the first statement is true, only the second statement is true, or both statements are true.
+Question: Can we say at least one of the following must always be true? (a) He avoids traffic and (b) He does not get a flat tire"
+Let's think step by step.
+Thought: The premises are (wakes up early -> avoid traffic), (flat tire -> -work), and (wakes up early | work). The goal is to prove (avoid traffic | -flat tire). I can use the premise (wakes up early | work) to check both possible cases. In the first case, if 'wakes up early' is true, then 'avoid traffic' must also be true, which makes the conclusion (avoid traffic | -flat tire) true. In the second case, if 'work' is true, I must use the contrapositive of the second premise, which is (work -> -flat tire). From this, 'work' being true means '-flat tire' is true, which also makes the conclusion (avoid traffic | -flat tire) true. Since the conclusion holds in both possible scenarios, it is logically guaranteed.
+FINAL ANSWER: YES
+//end of example
+
+Example//
+Context: If P, Q. Conversely, if R, -S. It is known that at least one of the following statements is true: either P or S. However, the actual veracity of either statement remains ambiguous, as it could be the case that only the first statement is true, only the second statement is true, or both statements are true.
+Question: Can we say at least one of the following must always be true? (a) -Q and (b) -S"
+Let's think step by step.
+Thought: The premises are (P -> Q), (R -> -S), and (P | S). The goal is to determine if (-Q | -S) must be true. I will try to find a counterexample where the premises are true but the conclusion is false. For the conclusion (-Q | -S) to be false, both Q and S must be true. Assuming this, we can check the premises: if S is true, then R must be false for the second premise (R -> -S) to hold. If Q is true, we can assume P is true to satisfy the first premise (P -> Q). This assignment also satisfies the third premise, (P | S), since both P and S are true. So, a counterexample exists where P is true, Q is true, S is true, and R is false. Since all premises can be true while the conclusion is false, the conclusion is not guaranteed.
+FINAL ANSWER: NO
+//end of example
+
+Context: If someone stores their food in the fridge, then it will remain fresh for a longer time. if they keep food outside, then it will spoil quickly. we know that atleast one of the following is true (1) john stores his food in the fridge and (2) it won't spoil quickly. note that we do not know which ones of (1) and (2) are true. it might be the case that only (1) is true, or only (2) is true or both are true.
+Question: Can we say at least one of the following must always be true? (a) it will remain fresh for a longer time and (b) he keeps food outside.
+Let's think step by step.
+Thought: 1. The premises are (stores food in fridge -> food remains fresh for longer time), (keeps food outside -> food spoils quickly), and (stores food in fridge | food spoils quickly). The goal is to prove (food remains fresh for longer time | keeps food outside). I can use the premise (stores food in fridge | food spoils quickly) to check both possible cases. In the first case, if 'stores food in fridge' is true, then 'food remains fresh for longer time' must also be true, which makes the conclusion (food remains fresh for longer time | keeps food outside) true. In the second case, if 'food spoils quickly' is true, I must use the contrapositive of the second premise, which is (food spoils quickly -> keeps food outside). From this, 'food spoils quickly' being true means 'keeps food outside' is true, which also makes the conclusion (food remains fresh for longer time | keeps food outside) true. Since the conclusion holds in both possible scenarios, it is logically guaranteed.
+FINAL ANSWER: YES
+//end of example

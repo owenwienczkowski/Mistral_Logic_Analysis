@@ -1,0 +1,21 @@
+Example//
+Context: If an individual wakes up early, they will avoid traffic. Conversely, if they get a flat tire, they will miss work. It is known that at least one of the following statements is true: either John wakes up early or he will work. However, the actual veracity of either statement remains ambiguous, as it could be the case that only the first statement is true, only the second statement is true, or both statements are true.
+Question: Can we say at least one of the following must always be true? (a) He avoids traffic and (b) He does not get a flat tire"
+Let's think step by step.
+Thought: The premises are (wakes up early -> avoid traffic), (flat tire -> -work), and (wakes up early | work). The goal is to prove (avoid traffic | -flat tire). I can use the premise (wakes up early | work) to check both possible cases. In the first case, if 'wakes up early' is true, then 'avoid traffic' must also be true, which makes the conclusion (avoid traffic | -flat tire) true. In the second case, if 'work' is true, I must use the contrapositive of the second premise, which is (work -> -flat tire). From this, 'work' being true means '-flat tire' is true, which also makes the conclusion (avoid traffic | -flat tire) true. Since the conclusion holds in both possible scenarios, it is logically guaranteed.
+FINAL ANSWER: YES
+//end of example
+
+Example//
+Context: If P, Q. Conversely, if R, -S. It is known that at least one of the following statements is true: either P or S. However, the actual veracity of either statement remains ambiguous, as it could be the case that only the first statement is true, only the second statement is true, or both statements are true.
+Question: Can we say at least one of the following must always be true? (a) -Q and (b) -S"
+Let's think step by step.
+Thought: The premises are (P -> Q), (R -> -S), and (P | S). The goal is to determine if (-Q | -S) must be true. I will try to find a counterexample where the premises are true but the conclusion is false. For the conclusion (-Q | -S) to be false, both Q and S must be true. Assuming this, we can check the premises: if S is true, then R must be false for the second premise (R -> -S) to hold. If Q is true, we can assume P is true to satisfy the first premise (P -> Q). This assignment also satisfies the third premise, (P | S), since both P and S are true. So, a counterexample exists where P is true, Q is true, S is true, and R is false. Since all premises can be true while the conclusion is false, the conclusion is not guaranteed.
+FINAL ANSWER: NO
+//end of example
+
+Context: If someone does not prioritize their well-being, they will likely experience health issues. Conversely, if they pay attention to their health, they will likely remain in good health. It is uncertain which of the following statements is true: (1) Mark neglects his health, or (2) he will not be healthy. It is possible that either only (1) is true, only (2) is true, or both are true.
+Question: Can we say at least one of the following must always be true? (a) he won't suffer from diseases and (b) he takes care of his health.
+Let's think step by step.
+Thought: 1. The premises are (not prioritize well-being -> health issues), (pay attention to health -> good health), and (not prioritize well-being | good health). The goal is to prove (healthy | takes care of health). I can use the premise (not prioritize well-being | good health) to check both possible cases. In the first case, if 'not prioritize well-being' is true, then 'health issues' must also be true, which makes the conclusion (healthy | takes care of health) false. In the second case, if 'good health' is true, I must use the contrapositive of the second premise, which is (good health -> takes care of health). From this, 'good health' being true means 'takes care of health' is true, which also makes the conclusion (healthy | takes care of health) true. Since the conclusion holds in both possible scenarios, it is logically guaranteed.
+2. The premises are (not prioritize well-being -> health issues), (pay attention to health -> good health), and (not prioritize well-being | good health). The goal is to prove (healthy | takes care of health). I can use the premise (not prioritize well-being | good health) to check both possible cases. In the first case, if 'not prioritize well-being' is true, then '
