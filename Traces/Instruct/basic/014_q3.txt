@@ -1,0 +1,4 @@
+[INST] Context: If someone does not prioritize their well-being, they will likely experience health issues. Conversely, if they pay attention to their health, they will likely remain in good health. It is uncertain which of the following statements is true: (1) Mark neglects his health, or (2) he will not be healthy. It is possible that either only (1) is true, only (2) is true, or both are true.
+Question: Can we say at least one of the following must always be true? (a) he will suffer from diseases and (b) he takes care of his health.
+Respond only either "Yes" or "No".
+FINAL ANSWER: [/INST] No. [end of text]

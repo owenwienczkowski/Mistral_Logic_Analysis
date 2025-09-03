@@ -1,0 +1,4 @@
+[INST] Context: If an individual frequently uses the internet, they may develop a dependency on it. On the contrary, if they spend more time outdoors, they tend to engage in physical activities. It is established that at least one of the following statements is true: either Aryan spends a significant amount of time on the internet or he will not become more active. It is possible that solely (1) is true, or solely (2) is true, or even both are true simultaneously.
+Question: Can we say at least one of the following must always be true? (a) he doesn't become addicted to it and (b) he goes outdoors more often.
+Respond only either "Yes" or "No".
+FINAL ANSWER: [/INST] No. [end of text]

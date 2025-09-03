@@ -1,0 +1,4 @@
+[INST] Context: If a person chooses to turn off their phone, they are likely to experience increased productivity. Conversely, leaving the phone on may lead to distractions. It is known that at least one of the following statements is true: either John has turned off his phone, or he will not be distracted. The accuracy of these statements is unknown, as it could be the case that only one of them is true, or both could be accurate.
+Question: Can we say at least one of the following must always be true? (a) he will be more productive and (b) he doesn't keep his phone on.
+Respond only either "Yes" or "No".
+FINAL ANSWER: [/INST] Yes. [end of text]

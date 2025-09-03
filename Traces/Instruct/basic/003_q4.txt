@@ -1,0 +1,4 @@
+[INST] Context: If someone engages in cardiovascular exercise, their overall well-being may improve. However, if an individual stays awake until late at night, they are likely to experience feelings of exhaustion the following day. One thing we can ascertain is that either the Jack goes for a run and doesn't feel tired, or he don't go for a run and feel tired. The exact situation remains unknown.
+Question: Can we say at least one of the following must always be true? (a) he won't feel healthier and (b) he doesn't stay up late.
+Respond only either "Yes" or "No".
+FINAL ANSWER: [/INST] No. [end of text]

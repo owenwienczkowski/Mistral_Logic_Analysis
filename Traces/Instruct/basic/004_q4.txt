@@ -1,0 +1,4 @@
+[INST] Context: If an individual decides to take a temporary break from their professional responsibilities, it can contribute to their overall sense of rejuvenation. However, if they choose to burden themselves with additional tasks, they may find themselves feeling overwhelmed. In this scenario, we are aware that at least one of the following statements holds true: (1) Mike takes a break from work, or (2) he do not experience overwhelming feelings. It is important to note that we lack knowledge regarding which one, or both, of these statements are accurate.
+Question: Can we say at least one of the following must always be true? (a) he won't feel refreshed and (b) he doesn't take on more tasks.
+Respond only either "Yes" or "No".
+FINAL ANSWER: [/INST] No. [end of text]
