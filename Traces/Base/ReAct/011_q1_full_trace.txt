@@ -1,0 +1,114 @@
+
+I need to translate the natural language problem into formal logic for Prover9.
+First, I will define the general rules with variables.
+Mapping predicates:
+"plays video games" -> plays_video_games(x)
+"has increased stress" -> has_increased_stress(x)
+"feel relaxed" -> feels_relaxed(x)
+"meditate regularly" -> meditates_regularly(x)
+
+General Premises (Axioms):
+1. plays_video_games(x) -> has_increased_stress(x).
+2. meditates_regularly(x) -> feels_relaxed(x).
+
+Now, I will formalize the specific facts about 'vicky'.
+Mapping specific facts:
+"Vicky plays video games" -> plays_video_games(vicky)
+"he do not feel relaxed" -> -feels_relaxed(vicky)
+
+Specific Premise (for this problem):
+3. plays_video_games(vicky) | -feels_relaxed(vicky).
+
+Goal:
+The goal is "has_increased_stress(vicky) | -meditates_regularly(vicky)".
+
+I will now format these premises and the goal for the Prover9 tool.
+Action:
+BEGIN_PROVER9_INPUT
+formulas(usable).
+  plays_video_games(x) -> has_increased_stress(x).
+  meditates_regularly(x) -> feels_relaxed(x).
+end_of_list.
+formulas(sos).
+  plays_video_games(vicky) | -feels_relaxed(vicky).
+end_of_list.
+formulas(goals).
+  has_increased_stress(vicky) | -meditates_regularly(vicky).
+end_of_list.
+END_PROVER9_INPUT
+
+END_PROVER9_INPUT
+Observation: PROVED
+Thought: The prover result was PROVED.
+FINAL ANSWER:
+The final answer is "has_increased_stress(vicky) | -meditates_regularly(vicky)".
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

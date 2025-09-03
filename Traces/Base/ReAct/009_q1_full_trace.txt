@@ -1,0 +1,138 @@
+
+I need to translate the natural language problem into formal logic for Prover9.
+First, I will define the general rules with variables.
+Mapping predicates:
+"chooses to turn off their phone" -> turns_off_phone(x)
+"experience increased productivity" -> is_productive(x)
+"leaving the phone on may lead to distractions" -> gets_distracted(x)
+"at least one of the following statements is true" -> at_least_one(x)
+"John has turned off his phone" -> turns_off_phone(john)
+"he will not be distracted" -> -gets_distracted(john)
+
+General Premises (Axioms):
+1. turns_off_phone(x) -> is_productive(x).
+2. gets_distracted(x) -> -is_productive(x).
+
+Now, I will formalize the specific facts about 'john'.
+Mapping specific facts:
+"John chooses to turn off his phone" -> turns_off_phone(john)
+"he will not be distracted" -> -gets_distracted(john)
+
+Specific Premise (for this problem):
+3. at_least_one(john).
+
+Goal:
+The goal is "is_productive(john) | -gets_distracted(john)".
+
+I will now format these premises and the goal for the Prover9 tool.
+Action:
+BEGIN_PROVER9_INPUT
+formulas(usable).
+  turns_off_phone(x) -> is_productive(x).
+  gets_distracted(x) -> -is_productive(x).
+end_of_list.
+formulas(sos).
+  at_least_one(john).
+end_of_list.
+formulas(goals).
+  is_productive(john) | -gets_distracted(john).
+end_of_list.
+END_PROVER9_INPUT
+
+END_PROVER9_INPUT
+Observation: FAILED
+Thought: The prover result was FAILED.
+FINAL ANSWER:
+The prover result was FAILED.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

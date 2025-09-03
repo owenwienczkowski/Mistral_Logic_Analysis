@@ -1,0 +1,109 @@
+
+I need to translate the natural language problem into formal logic for Prover9.
+First, I will define the general rules with variables.
+Mapping predicates:
+"neglects his health" -> neglects_health(x)
+"will suffer from diseases" -> suffers_diseases(x)
+"takes care of his health" -> takes_care_health(x)
+"will not be healthy" -> not_healthy(x)
+
+General Premises (Axioms):
+1. neglects_health(x) -> suffers_diseases(x).
+2. takes_care_health(x) -> not_healthy(x).
+
+Now, I will formalize the specific facts about 'mark'.
+Mapping specific facts:
+"Mark neglects his health" -> neglects_health(mark)
+"he will not be healthy" -> not_healthy(mark)
+
+Specific Premise (for this problem):
+3. neglects_health(mark) | not_healthy(mark).
+
+Goal:
+The goal is "suffers_diseases(mark) | takes_care_health(mark)".
+
+I will now format these premises and the goal for the Prover9 tool.
+Action:
+BEGIN_PROVER9_INPUT
+formulas(usable).
+  neglects_health(x) -> suffers_diseases(x).
+  takes_care_health(x) -> not_healthy(x).
+end_of_list.
+formulas(sos).
+  neglects_health(mark) | not_healthy(mark).
+end_of_list.
+formulas(goals).
+  suffers_diseases(mark) | takes_care_health(mark).
+end_of_list.
+END_PROVER9_INPUT
+
+END_PROVER9_INPUT
+Observation: FAILED
+Thought: The prover result was FAILED.
+FINAL ANSWER:
+The prover result was FAILED.
+Therefore, the answer is "suffers_diseases(mark) | takes_care_health(mark)".
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

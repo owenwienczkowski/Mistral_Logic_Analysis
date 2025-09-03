@@ -1,0 +1,132 @@
+
+I need to translate the natural language problem into formal logic for Prover9.
+First, I will define the general rules with variables.
+Mapping predicates:
+"frequently uses the internet" -> uses_internet(x)
+"develops a dependency on it" -> becomes_addicted(x)
+"spends more time outdoors" -> spends_more_time_outdoors(x)
+"engages in physical activities" -> engages_in_physical_activities(x)
+
+General Premises (Axioms):
+1. uses_internet(x) -> becomes_addicted(x).
+2. spends_more_time_outdoors(x) -> engages_in_physical_activities(x).
+
+Now, I will formalize the specific facts about 'aryan'.
+Mapping specific facts:
+"Aryan frequently uses the internet" -> uses_internet(aryan)
+"he will not become more active" -> -engages_in_physical_activities(aryan)
+
+Specific Premise (for this problem):
+3. uses_internet(aryan) | -engages_in_physical_activities(aryan).
+
+Goal:
+The goal is "becomes_addicted(aryan) | -spends_more_time_outdoors(aryan)".
+
+I will now format these premises and the goal for the Prover9 tool.
+Action:
+BEGIN_PROVER9_INPUT
+formulas(usable).
+  uses_internet(x) -> becomes_addicted(x).
+  spends_more_time_outdoors(x) -> engages_in_physical_activities(x).
+end_of_list.
+formulas(sos).
+  uses_internet(aryan) | -engages_in_physical_activities(aryan).
+end_of_list.
+formulas(goals).
+  becomes_addicted(aryan) | -spends_more_time_outdoors(aryan).
+end_of_list.
+END_PROVER9_INPUT
+
+END_PROVER9_INPUT
+Observation: PROVED
+Thought: The prover result was PROVED.
+FINAL ANSWER:
+The prover has determined that the goal is provable.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

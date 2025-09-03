@@ -1,0 +1,138 @@
+
+I need to translate the natural language problem into formal logic for Prover9.
+First, I will define the general rules with variables.
+Mapping predicates:
+"engage in cardiovascular exercise" -> cardio_exercise(x)
+"improve overall well-being" -> improves_well_being(x)
+"stay awake until late at night" -> stays_up_late(x)
+"feel tired" -> feels_tired(x)
+
+General Premises (Axioms):
+1. cardio_exercise(x) -> improves_well_being(x).
+2. stays_up_late(x) -> feels_tired(x).
+
+Now, I will formalize the specific facts about 'jack'.
+Mapping specific facts:
+"Jack goes for a run" -> cardio_exercise(jack)
+"he won't feel healthier" -> -improves_well_being(jack)
+"he doesn't stay up late" -> -stays_up_late(jack)
+"he doesn't feel tired" -> -feels_tired(jack)
+
+Specific Premise (for this problem):
+3. cardio_exercise(jack) | -feels_tired(jack).
+
+Goal:
+The goal is "-improves_well_being(jack) | -feels_tired(jack)".
+
+I will now format these premises and the goal for the Prover9 tool.
+Action:
+BEGIN_PROVER9_INPUT
+formulas(usable).
+  cardio_exercise(x) -> improves_well_being(x).
+  stays_up_late(x) -> feels_tired(x).
+end_of_list.
+formulas(sos).
+  cardio_exercise(jack) | -feels_tired(jack).
+end_of_list.
+formulas(goals).
+  -improves_well_being(jack) | -feels_tired(jack).
+end_of_list.
+END_PROVER9_INPUT
+
+END_PROVER9_INPUT
+Observation: FAILED
+Thought: The prover result was FAILED.
+FINAL ANSWER:
+The prover result was FAILED.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

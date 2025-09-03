@@ -1,0 +1,119 @@
+
+I need to translate the natural language problem into formal logic for Prover9.
+First, I will define the general rules with variables.
+Mapping predicates:
+"puts in a significant amount of time and effort at work" -> works_long_hours(x)
+"will become exhausted" -> becomes_exhausted(x)
+"takes regular breaks" -> takes_breaks(x)
+"feels revitalized" -> feels_revitalized(x)
+
+General Premises (Axioms):
+1. works_long_hours(x) -> becomes_exhausted(x).
+2. takes_breaks(x) -> feels_revitalized(x).
+
+Now, I will formalize the specific facts about 'john'.
+Mapping specific facts:
+"John works long hours" -> works_long_hours(john)
+"he will become exhausted" -> becomes_exhausted(john)
+"he doesn't take breaks" -> -takes_breaks(john)
+"he doesn't feel revitalized" -> -feels_revitalized(john)
+
+Specific Premise (for this problem):
+3. works_long_hours(john) | -feels_revitalized(john).
+
+Goal:
+The goal is "becomes_exhausted(john) | -takes_breaks(john)".
+
+I will now format these premises and the goal for the Prover9 tool.
+Action:
+BEGIN_PROVER9_INPUT
+formulas(usable).
+  works_long_hours(x) -> becomes_exhausted(x).
+  takes_breaks(x) -> feels_revitalized(x).
+end_of_list.
+formulas(sos).
+  works_long_hours(john) | -feels_revitalized(john).
+end_of_list.
+formulas(goals).
+  becomes_exhausted(john) | -takes_breaks(john).
+end_of_list.
+END_PROVER9_INPUT
+
+END_PROVER9_INPUT
+Observation: PROVED
+Thought: The prover result was PROVED.
+FINAL ANSWER:
+The final answer is "becomes_exhausted(john) | -takes_breaks(john)".
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

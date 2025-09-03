@@ -1,0 +1,103 @@
+
+I need to translate the natural language problem into formal logic for Prover9.
+First, I will define the general rules with variables.
+Mapping predicates:
+"neglects his health" -> neglects_health(x)
+"experience health issues" -> experiences_health_issues(x)
+"pay attention to his health" -> pays_attention_to_health(x)
+"remain in good health" -> remains_in_good_health(x)
+
+General Premises (Axioms):
+1. neglects_health(x) -> experiences_health_issues(x).
+2. pays_attention_to_health(x) -> remains_in_good_health(x).
+
+Now, I will formalize the specific facts about 'mark'.
+Mapping specific facts:
+"Mark neglects his health" -> neglects_health(mark)
+"he will not be healthy" -> -remains_in_good_health(mark)
+
+Specific Premise (for this problem):
+3. neglects_health(mark) | -remains_in_good_health(mark).
+
+Goal:
+The goal is "does_not_experience_health_issues(mark) | pays_attention_to_health(mark)".
+
+I will now format these premises and the goal for the Prover9 tool.
+Action:
+BEGIN_PROVER9_INPUT
+formulas(usable).
+  neglects_health(x) -> experiences_health_issues(x).
+  pays_attention_to_health(x) -> remains_in_good_health(x).
+end_of_list.
+formulas(sos).
+  neglects_health(mark) | -remains_in_good_health(mark).
+end_of_list.
+formulas(goals).
+  does_not_experience_health_issues(mark) | pays_attention_to_health(mark).
+end_of_list.
+END_PROVER9_INPUT
+
+END_PROVER9_INPUT
+Observation: FAILED
+Thought: The prover result was FAILED.
+FINAL ANSWER:
+The prover result was FAILED.
+Therefore, the answer is "does_not_experience_health_issues(mark) | pays_attention_to_health(mark)".
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

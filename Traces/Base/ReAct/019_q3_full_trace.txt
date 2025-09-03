@@ -1,0 +1,136 @@
+
+I need to translate the natural language problem into formal logic for Prover9.
+First, I will define the general rules with variables.
+Mapping predicates:
+"stores food in the fridge" -> stores_food_in_fridge(x)
+"remain fresh for a longer time" -> remains_fresh_for_longer_time(x)
+"keep food outside" -> keeps_food_outside(x)
+"spoil quickly" -> spoils_quickly(x)
+
+General Premises (Axioms):
+1. stores_food_in_fridge(x) -> remains_fresh_for_longer_time(x).
+2. keeps_food_outside(x) -> spoils_quickly(x).
+
+Now, I will formalize the specific facts about 'john'.
+Mapping specific facts:
+"john stores his food in the fridge" -> stores_food_in_fridge(john)
+"it won't spoil quickly" -> -spoils_quickly(john)
+
+Specific Premise (for this problem):
+3. stores_food_in_fridge(john) | -spoils_quickly(john).
+
+Goal:
+The goal is "remains_fresh_for_longer_time(john) | keeps_food_outside(john)".
+
+I will now format these premises and the goal for the Prover9 tool.
+Action:
+BEGIN_PROVER9_INPUT
+formulas(usable).
+  stores_food_in_fridge(x) -> remains_fresh_for_longer_time(x).
+  keeps_food_outside(x) -> spoils_quickly(x).
+end_of_list.
+formulas(sos).
+  stores_food_in_fridge(john) | -spoils_quickly(john).
+end_of_list.
+formulas(goals).
+  remains_fresh_for_longer_time(john) | keeps_food_outside(john).
+end_of_list.
+END_PROVER9_INPUT
+
+END_PROVER9_INPUT
+Observation: FAILED
+Thought: The prover result was FAILED.
+FINAL ANSWER:
+The prover result was FAILED.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
