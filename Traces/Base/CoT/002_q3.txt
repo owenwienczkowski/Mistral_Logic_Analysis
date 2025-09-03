@@ -1,0 +1,22 @@
+Example//
+Context: If an individual wakes up early, they will avoid traffic. Conversely, if they get a flat tire, they will miss work. It is known that at least one of the following statements is true: either John wakes up early or he will work. However, the actual veracity of either statement remains ambiguous, as it could be the case that only the first statement is true, only the second statement is true, or both statements are true.
+Question: Can we say at least one of the following must always be true? (a) He avoids traffic and (b) He does not get a flat tire"
+Let's think step by step.
+Thought: The premises are (wakes up early -> avoid traffic), (flat tire -> -work), and (wakes up early | work). The goal is to prove (avoid traffic | -flat tire). I can use the premise (wakes up early | work) to check both possible cases. In the first case, if 'wakes up early' is true, then 'avoid traffic' must also be true, which makes the conclusion (avoid traffic | -flat tire) true. In the second case, if 'work' is true, I must use the contrapositive of the second premise, which is (work -> -flat tire). From this, 'work' being true means '-flat tire' is true, which also makes the conclusion (avoid traffic | -flat tire) true. Since the conclusion holds in both possible scenarios, it is logically guaranteed.
+FINAL ANSWER: YES
+//end of example
+
+Example//
+Context: If P, Q. Conversely, if R, -S. It is known that at least one of the following statements is true: either P or S. However, the actual veracity of either statement remains ambiguous, as it could be the case that only the first statement is true, only the second statement is true, or both statements are true.
+Question: Can we say at least one of the following must always be true? (a) -Q and (b) -S"
+Let's think step by step.
+Thought: The premises are (P -> Q), (R -> -S), and (P | S). The goal is to determine if (-Q | -S) must be true. I will try to find a counterexample where the premises are true but the conclusion is false. For the conclusion (-Q | -S) to be false, both Q and S must be true. Assuming this, we can check the premises: if S is true, then R must be false for the second premise (R -> -S) to hold. If Q is true, we can assume P is true to satisfy the first premise (P -> Q). This assignment also satisfies the third premise, (P | S), since both P and S are true. So, a counterexample exists where P is true, Q is true, S is true, and R is false. Since all premises can be true while the conclusion is false, the conclusion is not guaranteed.
+FINAL ANSWER: NO
+//end of example
+
+Context: If an individual dedicates themselves to studying diligently, they will achieve commendable grades. In contrast, spending excessive amounts of time watching television will hinder their performance in school. It is important to note that at least one of the following statements holds true: either Tom is committed to studying diligently or he will excel academically. However, we cannot determine which statement is accurate, as it is plausible that only one of them is true or that both are true simultaneously.
+Question: Can we say at least one of the following must always be true? (a) he will get good grades. and (b) he watches too much tv..
+Let's think step by step.
+Thought:  The premises are (study diligently -> good grades), (watch too much tv -> -good grades), and (study diligently | good grades). The goal is to prove (good grades | watch too much tv). I can use the premise (study diligently | good grades) to check both possible cases. In the first case, if 'study diligently' is true, then 'good grades' must also be true, which makes the conclusion (good grades | watch too much tv) true. In the second case, if 'good grades' is true, I must use the contrapositive of the second premise, which is (good grades -> -watch too much tv). From this, 'good grades' being true means '-watch too much tv' is true, which also makes the conclusion (good grades | watch too much tv) true. Since the conclusion holds in both possible scenarios, it is logically guaranteed.
+FINAL ANSWER: YES
+//end of example
